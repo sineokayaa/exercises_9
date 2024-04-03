@@ -59,7 +59,7 @@ class Point:
         :param other: other point in a tuple
         :return: the new point
         '''
-        new = Point((self.x + other[0], self.y + other[1]))
+        new = Point((self.x + other.x, self.y + other.y))
         return new
 
 
@@ -68,4 +68,4 @@ point_2 = Point((2, 4))
 print(point_1)
 print(point_1.get_x())
 print(point_1.distance(point_2))
-print(point_1.sum((2, 4)))
+print(point_1.sum(point_2))
