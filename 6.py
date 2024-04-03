@@ -50,7 +50,7 @@ class Point:
         :param other: other point in a tuple
         :return: the distance
         '''
-        distance = ((other[0] - self.x) ** 2 + (other[1] - self.y) ** 2) ** 0.5
+        distance = ((other.x - self.x) ** 2 + (other.y - self.y) ** 2) ** 0.5
         return distance
 
     def sum(self, other):
@@ -64,7 +64,8 @@ class Point:
 
 
 point_1 = Point((1, 9))
+point_2 = Point((2, 4))
 print(point_1)
 print(point_1.get_x())
-print(point_1.distance((1, 2)))
+print(point_1.distance(point_2))
 print(point_1.sum((2, 4)))
