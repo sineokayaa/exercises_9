@@ -29,7 +29,8 @@ class StrandsDNA:
         :param strands: string with the strands separated by ' '
         :return: None
         '''
-        self.all_strands.append(strands.split())
+        for i in strands.split():
+            self.all_strands.append(i)
 
     def get_max_strands(self):
         '''
@@ -52,4 +53,7 @@ class StrandsDNA:
         return max_str
 
 strand = StrandsDNA(['ABC', 'NSD','APS', 'WPEEW', 'ABCDS', 'ABCDS'])
+print(strand.get_max_strands())
+strand.add_strands('llass dsdasdsl')
+print(strand)
 print(strand.get_max_strands())
